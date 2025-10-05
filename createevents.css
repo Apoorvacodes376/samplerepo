@@ -1,0 +1,182 @@
+/* ----------------------------------- */
+/* BASE STYLES & HEADER (LANDING PAGE CONSISTENCY) */
+/* ----------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f7f8fa;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e1e4e8;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e31837; /* Confetti/Eventbrite Red */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+/* Hover and Active State */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e31837;
+}
+
+/* Login Button Style */
+.btn-login {
+    background-color: #e31837;
+    color: #fff !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px;
+}
+.btn-login:hover {
+    background-color: #b3142c;
+    color: #fff !important;
+}
+
+/* ----------------------------------- */
+/* CREATE EVENT FORM STYLES            */
+/* ----------------------------------- */
+
+.create-event-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.create-event-container h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Form Styling */
+.event-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    /* Flex setup for the two-column date/time fields */
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+
+.form-section h2 {
+    width: 100%; /* Ensure heading takes full width */
+    color: #e31837;
+    margin-bottom: 20px;
+    border-left: 5px solid #e31837;
+    padding-left: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group:not(.half-width) {
+    width: 100%; /* Default to full width */
+}
+
+.form-group.half-width {
+    flex: 1 1 calc(50% - 10px); /* Two fields side-by-side */
+    min-width: 250px;
+}
+
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #e31837;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #b3142c;
+}
+
+/* ----------------------------------- */
+/* FOOTER STYLES                       */
+/* ----------------------------------- */
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}

@@ -1,0 +1,224 @@
+/* You MUST include the styles for .header, .navbar, .logo, .nav-links, and .footer from your main project */
+/* For brevity, I am only including the new layout styles here */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f7f8fa;
+}
+
+/* Main Layout Container (Sidebar + Grid) */
+.find-events-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Sidebar for Filters */
+.sidebar {
+    width: 280px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    height: fit-content; /* Prevents sidebar from stretching too far */
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.filter-group {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.filter-group h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #e31837; /* Eventbrite's signature red */
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+#applyFiltersBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e31837;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#applyFiltersBtn:hover {
+    background-color: #b3142c;
+}
+
+/* Event Listing Area */
+.event-listing {
+    flex-grow: 1;
+}
+
+.event-listing h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Individual Event Card */
+.event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 15px;
+}
+
+.event-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.event-info p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #e31837;
+    margin-bottom: 8px;
+}
+
+/* ----------------------------------- */
+/* Base Header and Navbar Styles       */
+/* ----------------------------------- */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e1e4e8;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e31837;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links li {
+    /* Required for proper dropdown positioning */
+    position: relative; 
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0; /* Add padding for click area */
+}
+
+/* Hover and Active State */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e31837;
+}
+
+/* Login Button Style */
+.btn-login {
+    background-color: #e31837;
+    color: #fff !important;
+    padding: 0.5rem 1rem !important; /* !important to override the standard link padding */
+    border-radius: 4px;
+}
+.btn-login:hover {
+    background-color: #b3142c;
+    color: #fff !important;
+}
+
+/* ----------------------------------- */
+/* Dropdown Styles (Repeated for consistency) */
+/* ----------------------------------- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 4px;
+    margin-top: 10px; 
+    border-top: 3px solid #e31837; 
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; 
+    white-space: nowrap; 
+}
+
+.dropdown-content a:hover {
+    background-color: #f7f8fa;
+    color: #e31837;
+}
+
+.dropdown-content.show {
+    display: block;
+}

@@ -1,0 +1,172 @@
+/* ----------------------------------- */
+/* BASE STYLES & HEADER (CONSISTENCY)  */
+/* ----------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f7f8fa;
+    line-height: 1.6;
+    color: #333;
+    /* Center content vertically for a cleaner login page look */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* Header (Copied from previous pages for consistency) */
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e1e4e8;
+    padding: 1rem 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e31837; /* Confetti/Eventbrite Red */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+/* Hover and Active State */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e31837;
+}
+
+/* Login Button Style (Used for active state on this page) */
+.btn-login {
+    background-color: #e31837;
+    color: #fff !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px;
+}
+.btn-login:hover {
+    background-color: #b3142c;
+    color: #fff !important;
+}
+.btn-login.active {
+    background-color: #b3142c; /* Slightly darker to indicate active state */
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* ----------------------------------- */
+/* LOGIN PAGE CONTENT STYLES           */
+/* ----------------------------------- */
+
+.login-container {
+    flex-grow: 1; /* Allows the container to take available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.login-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e31837;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #b3142c;
+}
+
+.options {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.options a {
+    color: #e31837;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.options span {
+    color: #ccc;
+    margin: 0 10px;
+}
